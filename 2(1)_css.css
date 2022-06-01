@@ -1,0 +1,26 @@
+ul {
+    list-style-type: none;
+    margin-top: auto;
+    padding: 0;
+    overflow: hidden;
+    background-color:darkkhaki;
+    text-decoration: none;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: #466d1d;
+    text-align: center;
+    padding: 14px 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:15px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color:white;
+  }

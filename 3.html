@@ -1,0 +1,167 @@
+<html>
+    <head>
+        <title>
+            south cuisine
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            *{box-sizing: border-box;}
+            body{
+                background-image: url('file:///C:/Users/Jagan Prasath/Desktop/Cafe website/Untitled design.png');
+                background-repeat: no-repeat;
+                width: 100%;
+            }
+            h2{
+                font-size: 30px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                color: #466d1d;
+                background-color:darkkhaki ;
+
+            }
+            .slideshow-container{
+                max-width: 300px;
+                position: relative;
+                float: right;
+                max-height: 500px;
+
+            }
+            .myslides{
+                display:none;
+            }
+            .prev, .next{
+                cursor:pointer;
+                position: absolute;
+                top:50%;
+                width:auto;
+                margin-top: -22px;
+                padding:16px;
+                color:white;
+                font-weight:bold;
+                font-size: 18px;
+                transition: 0.8s ease;
+                border-radius:0 3px 3px 0;
+                user-select: none;
+            }
+            .next{
+                right:0;
+                border-radius:3px 0 0 3px;
+            }
+            .prev:hover, .next:hover{
+                background-color:darkkhaki;
+            }
+            .text{
+                color: green;
+                font-size: 20px;
+                padding: 8px 12px;
+                position: absolute;
+                bottom: 8px;
+                width: 100%;
+                text-align: center;
+            }
+            .numbertext{
+                color: black;
+                font-size: 10px;
+                padding:8px 12px;
+                position: absolute;
+                top:0;
+            }
+            .dot{
+                cursor:pointer;
+                height:10px;
+                width:10px;
+                margin:0 2px;
+                background-color: black;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.8s ease;
+            }
+            .active, .dot:hover{
+                background-color: black;
+            }
+            .fade{
+                animation-name:fade;
+                animation-duration:2s ;
+            }
+            @keyframes fade{
+                from{
+                    opacity: .4
+                }
+                to{opacity: 1;}
+            
+            
+        </style>
+         <link rel="stylesheet" href="C:\Users\Jagan Prasath\Desktop\Cafe website\2(1)_css.css">
+        </head>
+    <body>
+        <h3>
+            ...
+        </h3>
+        <h1 style="text-align: center; font-size: 60px; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color:darkkhaki; margin-top: 30px;">
+            South Cuisine
+        </h1>
+        <ul>
+            <li><a href="C:\Users\Jagan Prasath\Desktop\Cafe website\1.html">Home</a></li>
+            <li><a href="C:\Users\Jagan Prasath\Desktop\Cafe website\2.html">Tamilnadu</a></li>
+            <li><a href="C:\Users\Jagan Prasath\Desktop\Cafe website\1.html">Kerala</a></li>
+            <li><a href="C:\Users\Jagan Prasath\Desktop\Cafe website\1.html">Karnataka</a></li>
+        </ul>
+        <h2>Pallipalayam chicken
+            </h2>
+        <p style="float: left;">
+            Firstly, the simplicity in the preparation method. There are no special masalas used here and only onions, red chillies are the main spices.
+
+Red chillies when sauteed in coconut oil release a beautiful aroma. The infused flavors of red chillies and onions make the Pallipalayam chicken popular all-over Tamilnadu.
+
+Next, the chicken is slow roasted and cooked completely with its own juice. Water is not used to cook the chicken because the onion moisture is enough to cook them.
+
+            </p>
+        <div class="slideshow-container">
+            <div class="myslides fade">
+                <div class="numbertext">1/3</div>
+                <img src="C:\Users\Jagan Prasath\Desktop\Cafe website\karnataka.jpg" style="width:100%">
+                <div class="text">sample</div>
+            </div>
+            <div class="myslides fade">
+                <div class="numbertext">2/3</div>
+                <img src="C:\Users\Jagan Prasath\Desktop\Cafe website\pongal.jpg" style="width:100%">
+                <div class="text">sample</div>
+            </div>
+            <div class="myslides fade">
+                <div class="numbertext">3/3</div>
+                <img src="C:\Users\Jagan Prasath\Desktop\Cafe website\kerala.jpg" style="width:100%">
+                <div class="text">sample</div>
+            </div>
+            <a class="prev" onclick="plusslides(-1)"><</a>
+            <a class="next" onclick="plusslides(11)">></a>
+        </div>
+        <br>
+        <script>
+           let slideIndex = 1;
+showslides(slideIndex);
+
+function plusslides(n) {
+  showslides(slideIndex += n);
+}
+
+function currentslide(n) {
+  showslides(slideIndex = n);
+}
+
+function showslides(n) {
+  let i;
+  let slides = document.getElementsByClassName("myslides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+} 
+        </script>
+    </body>
+</html>
